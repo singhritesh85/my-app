@@ -14,8 +14,8 @@ services:
     networks:
     - mynet
     
-  volumes:
-    myvol:
-  networks:
-    mynet:
-      driver: bridge
+volumes:
+  myvol:
+networks:
+  mynet:
+    driver: bridge
