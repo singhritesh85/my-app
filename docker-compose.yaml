@@ -1,0 +1,21 @@
+version: '3'
+services:
+  app:
+    build: 
+      context: ./
+      dockerfile: Dockerfile
+    image: myimage:1.05
+    container_name: test-container-01
+    ports:
+    - "8080:8080"
+    restart: always
+    volumes:
+    - myvol:/test
+    networks:
+    - mynet
+    
+  volumes:
+    myvol:
+  networks:
+    mynet:
+      driver: bridge
